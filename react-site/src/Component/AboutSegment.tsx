@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './About.css';
+import 'bootstrap/dist/css/bootstrap.css';
 const listItems = [
     {
         text: "About Me"
@@ -21,12 +22,21 @@ function ListAbout() {
     const [activeItem, setActiveItem] = useState('');
     return (
         <>
-
             <ul className="list-group">
-                {listItems.map((item, index) => (
-                    <li key={index} className={item.text === activeItem ? "list-group-item active" : "list-group-item"} onClick={() => setActiveItem(item.text)} > {item.text}</li>
-                ))
-                }
+                <div className="container1">
+                    <div className="row">
+                        {listItems.map((item, index) => (
+
+                            <div className="col">
+                                <li key={index}
+                                    className={item.text === activeItem ? "highlightedAB" : "list-group-item"}
+                                    onClick={() => activeItem === item.text ? setActiveItem('') : setActiveItem(item.text)} >
+                                    {item.text}
+                                </li>
+
+                            </div>
+                        ))}
+                    </div></div>
             </ul>
             {activeItem !== '' ? <div className="aboutBox">
                 {activeItem && <p>You clicked on: {activeItem}</p>}

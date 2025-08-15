@@ -1,5 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
+import './About.css'
 function Home() {
     return (
         <div className="container-medium">
