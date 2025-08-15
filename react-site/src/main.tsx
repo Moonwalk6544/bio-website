@@ -9,8 +9,9 @@ import Imager from './Component/Imager.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Home />
+
     <ListAbout />
     <Imager />
+
   </StrictMode>,
 )

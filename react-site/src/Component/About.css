@@ -7,7 +7,9 @@
     z-index: 8;
     position: absolute;
     position-area: top;
+
 }
+
 
 .box {
     border: 1px solid #ccc;
@@ -51,9 +53,10 @@
 }
 
 .logo {
-    max-width: 70%;
+    max-width: 50%;
     height: auto;
     padding: 1.5em;
+    margin-bottom: 0;
     will-change: filter;
     transition: filter 300ms;
 
@@ -80,6 +83,37 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+@media only screen and (min-width:320px) {
+    .logo {
+        max-width: 100%;
+    }
+
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+}
+
+@media (min-width:480px) {
+    /* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width:600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width:801px) {
+    .logo {
+        max-width: 50%;
+    }
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
 }
 
 @media (prefers-reduced-motion: no-preference) {

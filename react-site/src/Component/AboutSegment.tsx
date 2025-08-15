@@ -23,13 +23,13 @@ function ListAbout() {
     return (
         <>
             <ul className="list-group">
-                <div className="container1">
+                <div className="shadow container1">
                     <div className="row">
                         {listItems.map((item, index) => (
 
                             <div className="col">
                                 <li key={index}
-                                    className={item.text === activeItem ? "highlightedAB" : "list-group-item"}
+                                    className={item.text === activeItem ? "shadow-sm highlightedAB" : "list-group-item"}
                                     onClick={() => activeItem === item.text ? setActiveItem('') : setActiveItem(item.text)} >
                                     {item.text}
                                 </li>
@@ -38,7 +38,7 @@ function ListAbout() {
                         ))}
                     </div></div>
             </ul>
-            {activeItem !== '' ? <div className="aboutBox">
+            {activeItem !== '' ? <div className="shadow aboutBox">
                 {activeItem && <p>You clicked on: {activeItem}</p>}
             </div> : null}
         </>
